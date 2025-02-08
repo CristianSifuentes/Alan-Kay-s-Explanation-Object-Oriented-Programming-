@@ -16,10 +16,18 @@ public class BankAccount
     public void Deposit(decimal amount)
     {
         _balance += amount;
+        OnTransaction?.Invoke(new TransactionMessage(AccountHolder, $"Deposited {amount:C}. New balance: {_balance:C}"));
     }
 
-    internal void Withdraw(decimal amount)
+    public void Withdraw(decimal amount)
     {
-        _balance -= amount;
+        if(amount > _balance){
+            OnTransaction?.Invoke(new TransactionMessage(AccountHolder, "Insufficient funds!"));
+
+        }else {
+           _balance -= amount;
+            OnTransaction?.Invoke(new TransactionMessage(AccountHolder, $"Withdrew {amount:C}. New balance: {_balance:C}"));
+        }
+
     }
 }

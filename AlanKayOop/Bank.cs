@@ -3,8 +3,12 @@
 public class Bank
 {
     private readonly List<BankAccount> _accounts = new();
-    internal void RegisterAccount(BankAccount account)
-    {
+    public void RegisterAccount(BankAccount account){
+        account.OnTransaction += HandleTransaction;
         _accounts.Add(account);
+    }
+    private void HandleTransaction(IMessage message){
+        Console.WriteLine(message.GetMessage());
+
     }
 }
