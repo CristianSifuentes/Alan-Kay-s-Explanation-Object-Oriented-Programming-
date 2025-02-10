@@ -1,3 +1,3 @@
-public interface IMessage{
+public interface ICellMessage{
     string GetMessage();
 }
