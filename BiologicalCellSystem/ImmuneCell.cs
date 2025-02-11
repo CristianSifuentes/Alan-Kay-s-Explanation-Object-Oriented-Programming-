@@ -1,7 +1,13 @@
-public class ImmuneCell : Cell {
-    public ImmuneCell(string name) : base(name, 100){
-    }
-    protected override void ProcessSignal(ICellMessage message){
-        Console.WriteLine("Immune cell received signal");
+public class ImmuneCell : Cell
+{
+    public ImmuneCell(string name) : base(name, 120) { }
+
+    protected override void ProcessSignal(ICellMessage message)
+    {
+        if (message is ChemicalSignal signal && signal.SignalType == "Pathogen")
+        {
+            Console.WriteLine($"[{Name}] Activating immune response due to: {signal.Message}");
+            SendSignal(new ChemicalSignal("Response", "Releasing antibodies"));
+        }
     }
 }
