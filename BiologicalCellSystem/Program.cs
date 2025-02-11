@@ -5,7 +5,7 @@
         Neuron neuron = new Neuron("Neuron A");
         ImmuneCell immuneCell = new ImmuneCell("Immune B");
 
-              // Cells listen to each other's signals
+        // Cells listen to each other's signals
         neuron.OnSignalReceived += immuneCell.ReceiveSignal;
         immuneCell.OnSignalReceived += neuron.ReceiveSignal;
 
