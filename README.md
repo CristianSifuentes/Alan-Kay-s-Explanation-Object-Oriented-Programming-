@@ -1,6 +1,6 @@
 # **Alan Kay’s Original Vision of Object-Oriented Programming (OOP)**
 
-## ** Table of Contents**
+## **Table of Contents**
 1. [Introduction](#introduction)
 2. [Alan Kay’s Definition of OOP](#alan-kays-definition-of-oop)
 3. [Key Concepts in Alan Kay’s OOP](#key-concepts-in-alan-kays-oop)
@@ -20,12 +20,12 @@
 
 ---
 
-## ** Introduction**
+## **Introduction**
 Alan Kay, one of the pioneers of **Object-Oriented Programming (OOP)**, envisioned OOP as a system of **autonomous objects communicating via message passing**. His vision emphasized **encapsulation, independence, and scalability**, making it distinct from modern interpretations of OOP.
 
 ---
 
-## ** Alan Kay’s Definition of OOP**
+## **Alan Kay’s Definition of OOP**
 Alan Kay described OOP as:
 - **A system of independent objects that interact by passing messages.**
 - **Objects encapsulate their state and behavior.**
@@ -35,25 +35,25 @@ Unlike modern OOP (which often focuses on **class hierarchies** and **inheritanc
 
 ---
 
-## ** Key Concepts in Alan Kay’s OOP**
-### **🔹 Encapsulation**
+## **Key Concepts in Alan Kay’s OOP**
+### **- Encapsulation**
 Each object maintains **full control over its internal state** and does not expose it directly.
 
-### **🔹 Message Passing**
+### **- Message Passing**
 Objects interact **only through messages**, avoiding direct method calls.
 
-### **🔹 Autonomous Objects**
+### **- Autonomous Objects**
 Objects **act independently**, running their own behavior based on received messages.
 
-### **🔹 Late Binding**
+### **- Late Binding**
 Objects **determine behavior dynamically**, promoting flexibility and scalability.
 
-### **🔹 Scalability**
+### **- Scalability**
 Alan Kay’s model supports **scalability** and **distributed computing**, which is ideal for networked systems and parallel processing.
 
 ---
 
-## ** How Alan Kay’s OOP Differs from Modern OOP**
+## **How Alan Kay’s OOP Differs from Modern OOP**
 | **Feature** | **Alan Kay’s OOP** | **Modern OOP (C++, Java, C#)** |
 |------------|-------------------|-----------------------------|
 | **Main Focus** | Messaging between objects | Class hierarchies and inheritance |
@@ -64,8 +64,8 @@ Alan Kay’s model supports **scalability** and **distributed computing**, which
 
 ---
 
-## ** Implementation of Alan Kay’s OOP in C#**
-### **🔹 Designing Autonomous Objects**
+## **Implementation of Alan Kay’s OOP in C#**
+### **- Designing Autonomous Objects**
 ```csharp
 public interface IMessage
 {
@@ -78,14 +78,14 @@ public class TextMessage : IMessage
     public TextMessage(string content) => Content = content;
 }
 ```
-### **🔹 Message-Passing Mechanism**
+### **- Message-Passing Mechanism**
 ```csharp
 public interface ICommunicable
 {
     void SendMessage(IMessage message);
 }
 ```
-### **🔹 Loose Coupling and Dynamic Behavior**
+### **- Loose Coupling and Dynamic Behavior**
 ```csharp
 public class ChatBot : ICommunicable
 {
@@ -98,7 +98,7 @@ public class ChatBot : ICommunicable
 
 ---
 
-## ** Example: Alan Kay’s OOP in a Distributed System**
+## **Example: Alan Kay’s OOP in a Distributed System**
 A **multi-agent system** where **independent agents** communicate asynchronously.
 ```csharp
 public class Agent : ICommunicable
@@ -126,14 +126,14 @@ class Program
 ```
 ---
 
-## ** Extending the Model**
+## **Extending the Model**
 - **Asynchronous Processing**: Implement event-driven architectures.
 - **Real-World Simulations**: Apply in AI, robotics, and distributed networks.
 - **Microservices Design**: Model microservices as message-driven autonomous objects.
 
 ---
 
-## ** Final Thoughts**
+## **Final Thoughts**
 Alan Kay’s OOP focuses on **autonomous, message-driven objects** rather than class hierarchies. This vision aligns well with modern **distributed computing, microservices, and event-driven architectures**.
 
 Would you like to see **an advanced implementation** integrating **asynchronous programming** or **network communication**? 🚀
