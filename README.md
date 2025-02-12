@@ -36,19 +36,19 @@ Unlike modern OOP (which often focuses on **class hierarchies** and **inheritanc
 ---
 
 ## **Key Concepts in Alan Kay’s OOP**
-### **- Encapsulation**
+### **Encapsulation**
 Each object maintains **full control over its internal state** and does not expose it directly.
 
-### **- Message Passing**
+### **Message Passing**
 Objects interact **only through messages**, avoiding direct method calls.
 
-### **- Autonomous Objects**
+### **Autonomous Objects**
 Objects **act independently**, running their own behavior based on received messages.
 
-### **- Late Binding**
+### **Late Binding**
 Objects **determine behavior dynamically**, promoting flexibility and scalability.
 
-### **- Scalability**
+### **Scalability**
 Alan Kay’s model supports **scalability** and **distributed computing**, which is ideal for networked systems and parallel processing.
 
 ---
@@ -65,7 +65,7 @@ Alan Kay’s model supports **scalability** and **distributed computing**, which
 ---
 
 ## **Implementation of Alan Kay’s OOP in C#**
-### **- Designing Autonomous Objects**
+### **Designing Autonomous Objects**
 ```csharp
 public interface IMessage
 {
@@ -78,14 +78,14 @@ public class TextMessage : IMessage
     public TextMessage(string content) => Content = content;
 }
 ```
-### **- Message-Passing Mechanism**
+### **Message-Passing Mechanism**
 ```csharp
 public interface ICommunicable
 {
     void SendMessage(IMessage message);
 }
 ```
-### **- Loose Coupling and Dynamic Behavior**
+### **Loose Coupling and Dynamic Behavior**
 ```csharp
 public class ChatBot : ICommunicable
 {
